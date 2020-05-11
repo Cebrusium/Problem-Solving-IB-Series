@@ -1,0 +1,8 @@
+void Solution::arrange(vector<int> &A) {
+    int n = A.size();
+    for(int i = 0; i < A.size(); i++){
+        A[i] = (A[A[i]]%n)*n + A[i];
+    }
+    for(int i = 0; i < n; i++)
+        A[i] /= n;
+}
